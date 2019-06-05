@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+
+<head>
+  <script>
+    function red() {
+      console.log('RED');
+    }
+
+    function green() {
+      console.log('GREEN');
+    }
+
+    function blue() {
+      console.log('BLUE');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const button = document.getElementById('button');
+      document.querySelector('#button').addEventListener('click', function () {
+        red();
+        green();
+        blue();
+      });
+    });
+
+    /*
+      1. Скрипт, работающий с DOM должен запускаться уже после загрузки документа.
+      Поэтому я добавил слушателя события DOMContentLoaded для document, которое срабатывает,
+      когда браузер полностью загрузил HTML и построил DOM-дерево
+
+      2. Была допущена ошибка в document.querySelectorAll('button') - во-первых, элемент только один,
+      и нужно искать по querySelector. Во-вторых, не указан сам селектор #.
+
+      3. Убрал лишние события, объединил всё в одно.
+    */
+    
+  </script>
+</head>
+
+<body>
+  <button id="button">RGB</button>
+</body>
+
+</html>
