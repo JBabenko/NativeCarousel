@@ -53,6 +53,7 @@ html {
   &__wrap {
     display: flex;
     justify-content: space-between;
+    transition: transform 0.4s;
   }
   &__item {
     margin-right: 40px;
