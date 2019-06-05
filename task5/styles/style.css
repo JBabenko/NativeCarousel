@@ -295,6 +295,10 @@ html {
 }
 
 .carousel {
+  overflow: hidden;
+}
+
+.carousel__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,10 +309,9 @@ html {
 
 .carousel__item {
   margin-right: 40px;
-}
-
-.carousel__item:last-child {
-  margin-right: 0;
+  width: calc(100% / 3 - 80px / 3);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .item__subtitle {
@@ -375,6 +378,10 @@ html {
     margin: 0 auto;
     padding: 0 30px;
   }
+  .carousel__item {
+    margin-right: 24px;
+    width: calc(100% / 2 - 24px / 2);
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -391,6 +398,10 @@ html {
   }
   .link-m {
     display: block;
+  }
+  .carousel__item {
+    margin-right: 0;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -49,15 +49,15 @@ html {
 }
 
 .carousel {
-  display: flex;
-  justify-content: space-between;
-
+  overflow: hidden;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
   &__item {
     margin-right: 40px;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    width: calc(100% / 3 - 80px / 3);
+    flex-shrink: 0;
   }
 } 
 
@@ -120,6 +120,12 @@ html {
     margin: 0 auto;
     padding: 0 30px;
   }
+  .carousel {
+    &__item {
+      margin-right: 24px;
+      width: calc(100% / 2 - 24px / 2);
+    }
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -138,5 +144,11 @@ html {
   }
   .link-m {
     display: block;
+  }
+  .carousel {
+    &__item {
+      margin-right: 0;
+      width: 100%;
+    }
   }
 }
